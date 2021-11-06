@@ -24,6 +24,7 @@
                 });
             }
             return isLoggedIn().then(loggedIn => {
+                console.log("Logged in");
                 if (!loggedIn) {
                     console.log("Cannot log in by web id token");
                     // check login
