@@ -15,8 +15,35 @@ if __name__ == "__main__":
     join_tbl5_additional = pd.merge(tbl5_zbiranje, tbl_additional_odpz, on='ID_SUBJEKTA').rename(columns={"MS": "ZBIRALEC_MSO", "SIF_ODPADKA": "SIF_ODPADKA_T5"}).drop(columns=["STAT_REGIJA"])
     join_tbl2_additional = pd.merge(tbl2_obdelava, tbl_additional_odpp, left_on='ID_SUBJEKTI', right_on='ID_SUBJEKTA').rename(columns={"MS": "OBDELAVEC_MSO", "SIF_ODPADKA": "SIF_ODPADKA_T2"}).drop(columns=["STAT_REGIJA", "SIF_AKTIVNOST"])
 
-    join_tbl5 = join_tbl5_additional.groupby(by=["ODDANO_KOMU_MSO", "ZBIRALEC_MSO", "SIF_ODPADKA_T5", "ODDANO_KOMU"], axis=0, as_index=False)["KOLICINA_ODDANA"].sum()
-    join_tbl2 = join_tbl2_additional.groupby(by=["OBDELAVEC_MSO", "PREVZETO_OD_MSO_NAZIV", "SIF_ODPADKA_T2", "PREVZETO_OD"], axis=0, as_index=False)["KOLICINA_PREVZETA"].sum()
+    join_tbl5 = join_tbl5_additional.groupby(
+        by=[
+            "ID_SUBJEKTA",
+            "SIF_ODPADKA_T5",
+            "ODDANO_KOMU",
+            "ODDANO_KOMU_MSO",
+            "TUJ_PREVZEMNIK",
+            "DRZAVA_OBDELAVE_TUJINA",
+            "SIF_AKTIVNOST",
+            "ODPADNE_SVECE_200203_DA_NE",
+            "ID_POROCILA_y",
+            "VRSTA_POROCILA",
+            "LETO_POROCANJA",
+            "ZBIRALEC_MSO"
+        ], axis=0, as_index=False, dropna=False)["KOLICINA_ODDANA"].sum()
+    join_tbl2 = join_tbl2_additional.groupby(
+        by=[
+            "ID_POROCILA_x",
+            "ID_SUBJEKTI",
+            "SIF_ODPADKA_T2",
+            "PREVZETO_OD",
+            "PREVZETO_OD_MSO_NAZIV",
+            "DRZAVA_IZVORA",
+            "ODPADNE_SVECE_200203_DA_NE",
+            "ID_POROCILA_y",
+            "VRSTA_POROCILA",
+            "LETO_POROCANJA",
+            "OBDELAVEC_MSO"
+        ], axis=0, as_index=False, dropna=False)["KOLICINA_PREVZETA"].sum()
     join = pd.merge(
         join_tbl5,
         join_tbl2,
