@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">
-        const webIntegrationId = "gMP7EhKabnFcmAKwC0Zw-DamlJUWyilC";
+        const webIntegrationId = "USgSEZ0tWy_oFcwlMGTW5mY8-ageuLSL";
         function login() {
             function isLoggedIn() {
                 return fetch("https://y7re4jx3xts55u7.eu.qlikcloud.com/api/v1/users/me", {
@@ -24,6 +24,7 @@
             }
             return isLoggedIn().then(loggedIn => {
                 if (!loggedIn) {
+                    console.log("Cannot log in by web id token");
                     // check login
                     window.location.href = "https://y7re4jx3xts55u7.eu.qlikcloud.com/login?qlik-web-integration-id=" + webIntegrationId + "&returnto=" + location.href;
                     throw new Error('not logged in');
@@ -41,7 +42,7 @@
     <a href="#" class="right">Link</a>
 </div>
 
-<iframe src="https://y7re4jx3xts55u7.eu.qlikcloud.com/single/?appid=85c95617-ef92-4767-8cb6-77120731060e&obj=srQLcT&opt=ctxmenu,currsel" style="border:none;width:100%;height:100%;"></iframe>
+<iframe src="https://y7re4jx3xts55u7.eu.qlikcloud.com/single/?appid=85c95617-ef92-4767-8cb6-77120731060e&obj=srQLcT&opt=ctxmenu,currsel" style="border:none;width:100%;height:500px;"></iframe>
 <!--<iframe src="https://y7re4jx3xts55u7.eu.qlikcloud.com/single/?appid=ccc53d3a-77c2-48a4-9f5a-f7aa84d82f19&sheet=1ff88551-9c4d-41e0-b790-37f4c11d3df8&select=clearall" frameborder="0"></iframe>-->
 <div class="row">
     <div class="side">
