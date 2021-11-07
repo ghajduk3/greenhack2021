@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+ul {
+    Background-color: #4b4b4b;
+    border-bottom:solid #92C67D;
+    border-width: 12px;
+    list-style-type: none;
+    word-spacing: 50px;
+    margin-top: 0;
+    line-height: normal
+}
+
+a {
+    font-size: 20px;
+    color: #92C67D;
+    text-decoration: none;
+}
+
+li {
+    display:inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+a:active {
+    color: #719861;
+}
+
+a:hover {
+    color: #87D877;
+}
+
+i {
+    margin-top:20px;
+    color: whiteSmoke;
+    font-size: 50px;
+}
+
