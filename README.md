@@ -99,6 +99,12 @@ Simple, but very powerful.
 
 ## Roadmap
 
+1. First 3 months: Integrate with the existing `IS-Odpadki`
+2. First 6 months: Get involved with some of the waste collectors and waste processors
+3. First 1 year: set up systems for waste amount estimation
+4. First 2 years: A platform to fully manage waste transparently, at the fraction of the cost of sanation of a natural disaster such as a forest waste dump. 
+
 ## Call to Action
 
+Join us and use this opportunity to save our habitat, one dumpster at a time.
 
