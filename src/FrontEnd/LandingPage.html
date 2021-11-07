@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">
         const webIntegrationId = "USgSEZ0tWy_oFcwlMGTW5mY8-ageuLSL";
+
         function login() {
             function isLoggedIn() {
                 return fetch("https://y7re4jx3xts55u7.eu.qlikcloud.com/api/v1/users/me", {
@@ -15,7 +16,7 @@
                     mode: 'cors',
                     credentials: 'include',
                     headers: {
-                        'Access-Control-Allow-Origin' : 'https://ghajduk3.github.io',
+                        'Access-Control-Allow-Origin': '*',
                         'Content-Type': 'application/json',
                         'Authorization': 'Bearer eyJhbGciOiJFUzM4NCIsImtpZCI6ImIzMzMxYmY0LTQ1MGYtNDc5ZS04YTQ3LTAxNDY5NzU0YWEzYyIsInR5cCI6IkpXVCJ9.eyJzdWJUeXBlIjoidXNlciIsInRlbmFudElkIjoicU5VYkdXV0pPYnp5cGc5a3JXbDhBQ2FXYk5uWENFLU0iLCJqdGkiOiJiMzMzMWJmNC00NTBmLTQ3OWUtOGE0Ny0wMTQ2OTc1NGFhM2MiLCJhdWQiOiJxbGlrLmFwaSIsImlzcyI6InFsaWsuYXBpL2FwaS1rZXlzIiwic3ViIjoiWEJrbHphNTk2MzE5cVoxdDF0enBKUGZXU0E5WHhQcWsifQ.yqXqMv3IjrErogvBwcWzZ47e8BMPx1JjVqdTG4TxRTsGFhYUY9BnAVoi7viAqadFjDd2AJQVNMPYHKD3JVrS5fUCtL0GoDaZKF6hNlnd9kEtec_-GuFECg5Gzo2C8W_M'
                     },
@@ -23,6 +24,7 @@
                     return response.status === 200;
                 });
             }
+
             return isLoggedIn().then(loggedIn => {
                 console.log("Logged in");
                 if (!loggedIn) {
@@ -33,6 +35,7 @@
                 }
             });
         }
+
         login()
     </script>
 </head>
@@ -44,8 +47,11 @@
     <a href="#" class="right">Link</a>
 </div>
 
-<iframe src="https://y7re4jx3xts55u7.eu.qlikcloud.com/single/?appid=85c95617-ef92-4767-8cb6-77120731060e&obj=srQLcT&opt=ctxmenu,currsel" style="border:none;width:100%;height:500px;"></iframe>
-<!--<iframe src="https://y7re4jx3xts55u7.eu.qlikcloud.com/single/?appid=ccc53d3a-77c2-48a4-9f5a-f7aa84d82f19&sheet=1ff88551-9c4d-41e0-b790-37f4c11d3df8&select=clearall" frameborder="0"></iframe>-->
+<iframe
+        src="https://y7re4jx3xts55u7.eu.qlikcloud.com/single/?appid=85c95617-ef92-4767-8cb6-77120731060e&obj=srQLcT&opt=ctxmenu,currsel"
+        style="border:none;width:100%;height:100%;">
+</iframe>
+
 <div class="row">
     <div class="side">
         <h2>About Me</h2>
