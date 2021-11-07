@@ -6,38 +6,38 @@
     <title>Page Title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript">
-        const webIntegrationId = "USgSEZ0tWy_oFcwlMGTW5mY8-ageuLSL";
+<!--    <script type="text/javascript">-->
+<!--        const webIntegrationId = "USgSEZ0tWy_oFcwlMGTW5mY8-ageuLSL";-->
 
-        function login() {
-            function isLoggedIn() {
-                return fetch("https://y7re4jx3xts55u7.eu.qlikcloud.com/api/v1/users/me", {
-                    method: 'GET',
-                    mode: 'cors',
-                    credentials: 'include',
-                    headers: {
-                        'Access-Control-Allow-Origin': '*',
-                        'Content-Type': 'application/json',
-                        'Authorization': 'Bearer eyJhbGciOiJFUzM4NCIsImtpZCI6ImIzMzMxYmY0LTQ1MGYtNDc5ZS04YTQ3LTAxNDY5NzU0YWEzYyIsInR5cCI6IkpXVCJ9.eyJzdWJUeXBlIjoidXNlciIsInRlbmFudElkIjoicU5VYkdXV0pPYnp5cGc5a3JXbDhBQ2FXYk5uWENFLU0iLCJqdGkiOiJiMzMzMWJmNC00NTBmLTQ3OWUtOGE0Ny0wMTQ2OTc1NGFhM2MiLCJhdWQiOiJxbGlrLmFwaSIsImlzcyI6InFsaWsuYXBpL2FwaS1rZXlzIiwic3ViIjoiWEJrbHphNTk2MzE5cVoxdDF0enBKUGZXU0E5WHhQcWsifQ.yqXqMv3IjrErogvBwcWzZ47e8BMPx1JjVqdTG4TxRTsGFhYUY9BnAVoi7viAqadFjDd2AJQVNMPYHKD3JVrS5fUCtL0GoDaZKF6hNlnd9kEtec_-GuFECg5Gzo2C8W_M'
-                    },
-                }).then(response => {
-                    return response.status === 200;
-                });
-            }
+<!--        function login() {-->
+<!--            function isLoggedIn() {-->
+<!--                return fetch("https://y7re4jx3xts55u7.eu.qlikcloud.com/api/v1/users/me", {-->
+<!--                    method: 'GET',-->
+<!--                    mode: 'cors',-->
+<!--                    credentials: 'include',-->
+<!--                    headers: {-->
+<!--                        'Access-Control-Allow-Origin': '*',-->
+<!--                        'Content-Type': 'application/json',-->
+<!--                        'Authorization': 'Bearer eyJhbGciOiJFUzM4NCIsImtpZCI6ImIzMzMxYmY0LTQ1MGYtNDc5ZS04YTQ3LTAxNDY5NzU0YWEzYyIsInR5cCI6IkpXVCJ9.eyJzdWJUeXBlIjoidXNlciIsInRlbmFudElkIjoicU5VYkdXV0pPYnp5cGc5a3JXbDhBQ2FXYk5uWENFLU0iLCJqdGkiOiJiMzMzMWJmNC00NTBmLTQ3OWUtOGE0Ny0wMTQ2OTc1NGFhM2MiLCJhdWQiOiJxbGlrLmFwaSIsImlzcyI6InFsaWsuYXBpL2FwaS1rZXlzIiwic3ViIjoiWEJrbHphNTk2MzE5cVoxdDF0enBKUGZXU0E5WHhQcWsifQ.yqXqMv3IjrErogvBwcWzZ47e8BMPx1JjVqdTG4TxRTsGFhYUY9BnAVoi7viAqadFjDd2AJQVNMPYHKD3JVrS5fUCtL0GoDaZKF6hNlnd9kEtec_-GuFECg5Gzo2C8W_M'-->
+<!--                    },-->
+<!--                }).then(response => {-->
+<!--                    return response.status === 200;-->
+<!--                });-->
+<!--            }-->
 
-            return isLoggedIn().then(loggedIn => {
-                console.log("Logged in");
-                if (!loggedIn) {
-                    console.log("Cannot log in by web id token");
-                    // check login
-                    window.location.href = "https://y7re4jx3xts55u7.eu.qlikcloud.com/login?qlik-web-integration-id=" + webIntegrationId + "&returnto=" + location.href;
-                    throw new Error('not logged in');
-                }
-            });
-        }
+<!--            return isLoggedIn().then(loggedIn => {-->
+<!--                console.log("Logged in");-->
+<!--                if (!loggedIn) {-->
+<!--                    console.log("Cannot log in by web id token");-->
+<!--                    // check login-->
+<!--                    window.location.href = "https://y7re4jx3xts55u7.eu.qlikcloud.com/login?qlik-web-integration-id=" + webIntegrationId + "&returnto=" + location.href;-->
+<!--                    throw new Error('not logged in');-->
+<!--                }-->
+<!--            });-->
+<!--        }-->
 
-        login()
-    </script>
+<!--        login()-->
+<!--    </script>-->
 </head>
 <body>
 <div class="navbar">
