@@ -32,7 +32,13 @@ which make our environment more toxic and contribute to additional acceleration 
 We propose a novel solution to the problem, by implementing an oracle-like system
 which is monitoring the reporting of the amounts of waste being transferred in both cases.
 
-The system is able to detect 
+The system has the ability to detect discrepancies within the reported data from both reporting sides.
+The discrepancies are later reported to the parties involved in the following order:
+1. warn the directly involed parties, i.e. waste collectors and waste processors
+2. warn the authorities if no fixes are detected by the involved parties
+
+At all times, it is keeping a strict timeline of events on who has reported what and has changed/updated what.
+With this solution we provide a fair and transparent system for waste management.   
 
 ### Research 
 
@@ -93,14 +99,6 @@ Simple, but very powerful.
 
 ## Roadmap
 
-1. First 3 months: Integrate with the existing `IS-Odpadki`
-2. First 6 months: Get involved with some of the waste collectors and waste processors
-3. First 1 year: set up systems for waste amount estimation
-4. First 2 years: A platform to fully manage waste transparently, at the fraction of the cost of sanation of a natural disaster such as a forest waste dump. 
-
 ## Call to Action
-
-Join us and use this opportunity to save our habitat, one dumpster at a time.
-
 
 
