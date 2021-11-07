@@ -1,4 +1,9 @@
 # GreenHack 2021: Waste Management 
+## Team members:
+  - Marko Prelevikj
+  - Stefan Ivanisevic
+  - Ivan Orlandic
+  - Gojko Hajdukovic
 
 ## Introduction
 
